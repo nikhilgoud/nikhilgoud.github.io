@@ -1,0 +1,21 @@
+{
+  "name": "Nikhil Goud - Technical Solutions Expert",
+  "short_name": "Nikhil Goud",
+  "description": "Nikhil Goud, a technology expert and full stack web developer specializing in NextJS, MongoDB, React, TailwindCSS, NodeJS, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f4f9",
+  "theme_color": "#333333",
+  "icons": [
+    {
+      "src": "public/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "public/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#333333">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikhil Goud - Technical Solutions Expert | Technology Enthusiast | Full Stack Web Developer</title>
+  <meta name="description"
+    content="Nikhil Goud, a technology expert and full stack web developer specializing in NextJS, MongoDB, React, TailwindCSS, NodeJS, NestJS, .NET, MSSQL and more.">
+  <meta name="author" content="Nikhil Goud">
+  <meta name="keywords"
+    content="Nikhil Goud, Full Stack Web Developer, NextJS, NestJS, React, NodeJS, .Net, MongoDB, MSSQL, Software Architect, Hyderabad, India">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+
+    header,
+    main,
+    footer {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header {
+      /* position: fixed; */
+      z-index: 1;
+      text-align: center;
+      width: 100%;
+    }
+
+    section {
+      padding: 1rem;
+    }
+
+    h1,
+    h3 {
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .h-scroll {
+      overflow-x: scroll;
+      white-space: nowrap;
+    }
+
+    .info {
+      padding: 0
+    }
+
+    .info embed {
+      width: 180px;
+      height: 180px;
+      filter: drop-shadow(0 0 0.75rem rgb(150, 150, 150));
+    }
+
+    .list-info ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .list-info li {
+      margin: 1rem 0;
+      font-size: 1.2em;
+    }
+
+    .social-links img,
+    .skills img {
+      width: 80px;
+      height: 80px;
+      margin: 1rem;
+      border-radius: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .skills img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .social-links img:hover,
+    .skills img:hover,
+    .projects img:hover,
+    .projects a:hover,
+    .info embed:hover {
+      transform: scale(1.25);
+      opacity: 90%;
+      filter: drop-shadow(0 0 0.75rem rgb(150, 150, 150));
+    }
+
+    .projects img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .projects li {
+      padding: 0.5rem;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+      /* background-color: #f0f0f0; */
+      line-height: 120%;
+      text-align: start;
+    }
+
+    .projects a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .projects.more {
+      border: black 1px solid;
+      padding: 0.75rem 1.5rem;
+      border-radius: 100px;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      text-decoration: none;
+
+    }
+
+    .projects.more:hover {
+      transform: scale(1.05);
+      opacity: 80%;
+      background-color: #eee;
+      filter: drop-shadow(0 0 0.75rem rgb(150, 150, 150));
+    }
+
+    .dot-arrow-container {
+      display: inline-block;
+      padding-left: 20px;
+      cursor: pointer;
+    }
+
+    .dot-arrow {
+      flex: 0 0 auto;
+      height: 25px;
+      overflow: visible;
+      position: relative;
+      transform: none;
+      transform-origin: 50% 50% 0px;
+    }
+
+    .circle {
+      height: 25px;
+      width: 25px;
+      left: 0px;
+      position: absolute;
+      transform: none;
+      transform-origin: 50% 50% 0px;
+      image-rendering: pixelated;
+      flex-shrink: 0;
+      background-size: 100% 100%;
+      background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20viewBox%3D%220%200%2026%2026%22%3E%3Cpath%20d%3D%22M%2013%201%20C%2019.627%201%2025%206.373%2025%2013%20C%2025%2019.627%2019.627%2025%2013%2025%20C%206.373%2025%201%2019.627%201%2013%20C%201%206.373%206.373%201%2013%201%20Z%22%20fill%3D%22transparent%22%20stroke-width%3D%222%22%20stroke%3D%22rgb(47%2C%2054%2C%2063)%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+      background-repeat: no-repeat;
+
+    }
+
+    .arrow {
+      height: 10px;
+      left: 10px;
+      position: absolute;
+      top: calc(50% - 5px);
+      width: 50px;
+      transform: none;
+      transform-origin: 50% 50% 0px;
+      image-rendering: pixelated;
+      flex-shrink: 0;
+      background-size: 100% 100%;
+      background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20viewBox%3D%220%200%2050%2010%22%3E%3Cpath%20d%3D%22M%2043.643%200.293%20C%2043.228%200.683%2043.228%201.317%2043.643%201.707%20L%2046.082%204%20L%201.837%204%20C%201.25%204%200.773%204.448%200.773%205%20C%200.773%205.552%201.25%206%201.837%206%20L%2046.082%206%20L%2043.643%208.293%20C%2043.228%208.683%2043.228%209.317%2043.643%209.707%20C%2044.059%2010.098%2044.732%2010.098%2045.148%209.707%20L%2049.403%205.707%20C%2049.819%205.317%2049.819%204.683%2049.403%204.293%20L%2045.148%200.293%20C%2044.732%20-0.098%2044.059%20-0.098%2043.643%200.293%20Z%22%20fill%3D%22rgb(47%2C54%2C63)%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+      background-repeat: no-repeat;
+    }
+
+    .arrow:hover {
+      -webkit-transition: transform 1s ease-in-out;
+      transform: translateX(-45px);
+    }
+
+    header .arrow {
+      left: -30px
+    }
+
+    header .arrow:hover {
+      transform: translateX(40px);
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 1rem 0;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        /* flex-direction: column; */
+      }
+
+      .list-info ul li {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Hi 👋, I'm Nikhil Goud
+      <div class="dot-arrow-container">
+        <div class="dot-arrow">
+          <div class="circle"></div>
+          <div class="arrow"></div>
+        </div>
+      </div>
+    </h1>
+    <h3 class="container"><span>Technical Solutions Expert</span>|<span>Technology Enthusiast</span>|<span>Full Stack Web Developer</span>
+    </h3>
+  </header>
+  <main>
+    <section class="info">
+      <embed src="public/icon-circle.svg" width="120" height="120" type="image/svg+xml">
+    </section>
+    <section class="list-info">
+      <ul>
+        <li>🌱 I’m currently working as <strong>Associate Architect</strong> at <strong>Paltech, Hyderabad, India</strong></li>
+        <li>💬 Ask me about <strong>NextJS, React, NodeJS, NestJS, .NET, MongoDB, MSSQL, C#, JavaScript, TailwindCSS, AWS & Angular</strong>
+        </li>
+        <li>📫 contact <strong><a rel="noopener" href="mailto:nikhilgoud24@gmail.com">nikhilgoud24@gmail.com</a></strong></li>
+        <li>😄 Pronouns: He / Him</li>
+        <li>⚡ Fun fact: My name means <span title="Infinity"><img align='center' alt="Infinity"
+              src="https://img.icons8.com/clouds/512/infinity.png" height='30' width='30'></span></li>
+
+      </ul>
+    </section>
+
+    <section>
+      <h3>Connect with me:</h3>
+      <div class="container social-links">
+
+        <a rel="noopener" href='https://twitter.com/nikhilgoud_dev' target='_blank' title='Twitter'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/twitter/twitter-original.svg' alt='nikhilgoud'>
+        </a>
+        <a rel="noopener" href='https://linkedin.com/in/nikhilgoud' target='_blank' title='LinkedIn'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg' alt='nikhilgoud'>
+        </a>
+        <a rel="noopener" href='https://stackoverflow.com/users/4189897/nikhilgoud' target='_blank' title='StackOverflow'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/stackoverflow/stackoverflow-original.svg'
+            alt='nikhilgoud'>
+        </a>
+        <a rel="noopener" href='https://dev.to/nikhilgoud' target='_blank' title='Dev.to'>
+          <img src='https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png' alt='nikhilgoud'>
+        </a>
+      </div>
+    </section>
+    <hr />
+    <section>
+      <h3>Proficient Skills and Tools:</h3>
+      <div class="container skills">
+        <a rel="noopener" href='https://developer.mozilla.org/en-US/docs/Web/JavaScript' target='_blank' title='JavaScript'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg' alt='javascript'>
+        </a>
+        <a rel="noopener" href='https://nodejs.org' target='_blank' title='NodeJS'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-plain-wordmark.svg' alt='nodejs'>
+        </a>
+        <a rel="noopener" href='https://reactjs.org/' target='_blank' title='React'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg' alt='react'>
+        </a>
+        <a rel="noopener" href='https://nextjs.org/' target='_blank' title='NextJS'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg' alt='nextjs'>
+        </a>
+
+        <a rel="noopener" href='https://expressjs.com' target='_blank' title='ExpressJS'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg' alt='express'>
+        </a>
+        <a rel="noopener" href='https://nestjs.com' target='_blank' title='NestJS'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/nestjs/nestjs-original.svg' alt='nestjs'>
+        </a>
+        <a rel="noopener" href='https://fastify.io' target='_blank' title='fastify'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/fastify/fastify-original.svg' alt='nestjs'>
+        </a>
+        <a rel="noopener" href='https://www.typescriptlang.org/' target='_blank' title='TypeScript'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg' alt='typescript'>
+        </a>
+        <a rel="noopener" href='https://angular.io' target='_blank' title='Angular'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/angular/angular-original.svg' alt='angular'>
+        </a>
+        <a rel="noopener" href='https://www.w3schools.com/css/' target='_blank' title='CSS'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg' alt='css3'>
+        </a>
+        <a rel="noopener" href='https://www.w3.org/html/' target='_blank' title='HTML'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg' alt='html5'>
+        </a>
+        <a rel="noopener" href='https://sass-lang.com' target='_blank' title='SASS'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg' alt='sass'>
+        </a>
+        <a rel="noopener" href='https://tailwindcss.com/' target='_blank' title='tailwindcss'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg' alt='tailwindcss'>
+        </a>
+        <a rel="noopener" href='https://getbootstrap.com' target='_blank' rel='noreferrer' title='Bootstrap'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg' alt='bootstrap' />
+        </a>
+        <a rel="noopener" href='https://dotnet.microsoft.com/en-us/languages/csharp' target='_blank' rel='noreferrer' title='DotNet'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg' alt='csharp' />
+        </a>
+        <a rel="noopener" href='https://www.python.org' target='_blank' rel='noreferrer' title='Python'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg' alt='python' />
+        </a>
+        <a rel="noopener" href='https://git-scm.com/' target='_blank' rel='noreferrer' title='Git'>
+          <img src='https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg' alt='git' />
+        </a>
+        <a rel="noopener" href='https://www.microsoft.com/en-in/sql-server' target='_blank' rel='noreferrer' title='MS Sql Server'>
+          <img
+            src='https://raw.githubusercontent.com/devicons/devicon/master/icons/microsoftsqlserver/microsoftsqlserver-original-wordmark.svg'
+            alt='mssqlserver' />
+        </a>
+        <a rel="noopener" href='https://www.mongodb.com/' target='_blank' rel='noreferrer' title='MongoDB'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg' alt='mongodb' />
+        </a>
+        <a rel="noopener" href='https://www.mongoose.com/' target='_blank' rel='noreferrer' title='mongoose'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/mongoose/mongoose-original-wordmark.svg'
+            alt='mongoose' />
+        </a>
+        <a rel="noopener" href='https://www.postgresql.org' target='_blank' rel='noreferrer' title='Postgres'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg'
+            alt='postgresql' />
+        </a>
+        <a rel="noopener" href='https://www.atlassian.com/software/jira' target='_blank' rel='noreferrer' title='Jira'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/jira/jira-original.svg' alt='jira' />
+        </a>
+        <a rel="noopener" href='https://www.atlassian.com/software/confluence' target='_blank' rel='noreferrer' title='Confluence'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/confluence/confluence-original.svg' alt='confluence' />
+        </a>
+        <a rel="noopener" href='https://www.notion.so' target='_blank' rel='noreferrer' title='Notion'>
+          <img src='https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg' alt='notion' />
+        </a>
+        <a rel="noopener" href='https://docs.docker.com' target='_blank' rel='noreferrer' title='Docker'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg' alt='docker' />
+        </a>
+        <a rel="noopener" href='https://aws.amazon.com/' target='_blank' rel='noreferrer' title='AWS'>
+          <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg'
+            alt='amazonwebservices' />
+        </a>
+      </div>
+    </section>
+    <hr />
+
+    <section>
+      <h3>Projects</h3>
+      <div class="container projects">
+        <div class="list-info">
+          <h4>Live Demos</h4>
+          <ul>
+            <li><a rel="noopener" href='https://nikhilgoud.github.io/material-mui-date-range-picker/' target='_blank' rel='noreferrer'
+                title='NPM material-mui-date-range-picker'>
+                <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg' alt='react'>NPM
+                material-mui-date-range-picker
+              </a></li>
+            <li><a rel="noopener" href='https://nikhilgoud.github.io/react-ts-webpack-eslint-jest/' target='_blank' rel='noreferrer'
+                title='Infinite Dad Jokes'>
+                <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg' alt='react'>Infinite Dad
+                Jokes :)
+              </a></li>
+            <li><a rel="noopener" href='https://github.com/nikhilgoud/qb-next-pwa' target='_blank' rel='noreferrer'
+                title='Infinite Dad Jokes'>
+                <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg' alt='react'>NextJS PWA
+              </a></li>
+          </ul>
+        </div>
+        <div class="list-info">
+          <h4>Projects</h4>
+          <ul>
+            <li><a rel="noopener" href='https://github.com/nikhilgoud/ngx-translate-utils' target='_blank' rel='noreferrer'
+                title='VSCode Plugin for projects using ngx-translate package'>
+                <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg' alt='vscode' />Plugin
+                for projects using ngx-translate package
+              </a></li>
+
+            <li><a rel="noopener" href='https://github.com/nikhilgoud/materialui-daterange-picker' target='_blank' rel='noreferrer'
+                title='NPM material-mui-date-range-picker'>
+                <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg' alt='npm' />
+                Package for MaterialUI DateRange Picker
+              </a></li>
+            <li>
+              <a rel="noopener" href='https://github.com/nikhilgoud/cachize-decorator' target='_blank' rel='noreferrer'
+                title='NPM material-mui-date-range-picker'>
+                <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/angular/angular-original.svg' alt='angular' />
+                In-Memory Cache using Decorator on method, service.
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a class="projects more" rel="noopener" href="https://github.com/nikhilgoud?tab=repositories&q=&type=&language=&sort=stargazers"
+        target='_blank' rel='noreferrer'>
+        <img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg' alt='github' />More...
+      </a>
+    </section>
+    <hr />
+    <section>
+      <h3>GitHub Profile Stats:</h3>
+      <div class="h-scroll">
+        <div>
+          <img alt="github-profile-trophy"
+            src='https://github-readme-stats.vercel.app/api?username=nikhilgoud&hide_title=true&hide_border=true&show_icons=true&include_all_commits=true&count_private=true&theme=dark' />
+        </div>
+        <div> <img alt="github-profile-languages"
+            src='https://github-readme-stats.vercel.app/api/top-langs/?username=nikhilgoud&hide=html&hide_title=true&hide_border=true&layout=compact&langs_count=6&theme=dark' />
+        </div>
+        <div>
+          <a rel="noopener" href="https://github.com/nikhilgoud" target='_blank'>
+            <img src="https://github-readme-streak-stats.herokuapp.com?user=nikhilgoud&show_icons=true&hide_border=true&theme=blue-green"
+              alt="GitHub Streak" /></a>
+        </div>
+        <div>
+          <a rel="noopener" href="https://github.com/nikhilgoud" target='_blank'>
+            <img alt="github-profile-trophy"
+              src='https://github-profile-trophy.vercel.app/?username=nikhilgoud&theme=matrix&no-frame=true&no-bg=true&row=2&column=3' />
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">&copy; 2024 Nikhil Goud. All Rights Reserved. <a rel="noopener" href='https://github.com/nikhilgoud'
+        target='_blank' title='View GitHub Profile'>
+        <img src="https://komarev.com/ghpvc/?username=nikhilgoud" alt="Profile View Counter">
+      </a></div>
+  </footer>
+
+</body>
+
+</html>
