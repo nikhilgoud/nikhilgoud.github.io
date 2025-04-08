@@ -1,4 +1,4 @@
-const cacheName = 'nikhil-goud-cache-v1';
+const cacheName = 'ng-dev';
 const staticAssets = ['./', './index.html', './style.css', './manifest.json'];
 
 self.addEventListener('install', async (event) => {
